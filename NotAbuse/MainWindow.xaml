@@ -1,0 +1,148 @@
+﻿<Window x:Class="NotAbuse.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NotAbuse"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0.009"/>
+                <GradientStop Color="#FF181559" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="1" Grid.Row="1" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Button Content="Start" Grid.Row="1" Margin="10,15" BorderThickness="2" Click="Button_Click_3">
+                <Button.BorderBrush>
+                    <LinearGradientBrush EndPoint="0,0" StartPoint="1,-1">
+                        <GradientStop Color="#FF00F3FF" Offset="0"/>
+                        <GradientStop Color="#FF00FF51" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.BorderBrush>
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="1,0">
+                        <GradientStop Color="#FF80FF00" Offset="0"/>
+                        <GradientStop Color="#FF00BD09" Offset="0.996"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Content="Stop" Grid.Row="3" Margin="10,15" BorderThickness="2" Click="Button_Click_4">
+                <Button.BorderBrush>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="1,-1">
+                        <GradientStop Color="#FF5100FF" Offset="0"/>
+                        <GradientStop Color="#FFAE7DD6" Offset="0.996"/>
+                    </LinearGradientBrush>
+                </Button.BorderBrush>
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="1,0">
+                        <GradientStop Color="#FF000CFF" Offset="1"/>
+                        <GradientStop Color="#FF0074FF"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Content="Cancel" Grid.Row="5" Margin="10,15" BorderThickness="2" Click="Button_Click_5">
+                <Button.BorderBrush>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="1,0">
+                        <GradientStop Color="#FFFF00AE" Offset="0"/>
+                        <GradientStop Color="#FFFF8000" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.BorderBrush>
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="1,0">
+                        <GradientStop Color="#FF630000" Offset="1"/>
+                        <GradientStop Color="Red"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Select Folder" Grid.Column="1" Margin="25,3" BorderBrush="#FF00FFF3" Click="Button_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFC92B8F" Offset="0"/>
+                        <GradientStop Color="#FFA532D8" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Content="Select File With Abuse" Grid.Column="3" Margin="25,3" BorderBrush="#FF23FF00" Click="Button_Click_1">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF6D3DD3" Offset="0"/>
+                        <GradientStop Color="#FFA532D8" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <Button Content="Copy to" Grid.Column="1" Margin="5,3" BorderBrush="{x:Null}" Click="Button_Click_2">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,0" StartPoint="1,0">
+                    <GradientStop Color="#FF5D00FF" Offset="0"/>
+                    <GradientStop Color="#FFB900FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Grid Grid.Row="3" Grid.ColumnSpan="2">
+            <ProgressBar x:Name="prog" Margin="60,7" BorderBrush="#FFD4D4D4" Background="#4C005F04">
+                <ProgressBar.Foreground>
+                    <RadialGradientBrush GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="10">
+                        <GradientStop Color="#00000000" Offset="1"/>
+                        <GradientStop Color="#FF06B025"/>
+                        <GradientStop Color="#FF06B025" Offset="0.15"/>
+                        <GradientStop Color="#00000000" Offset="0.4"/>
+                    </RadialGradientBrush>
+                </ProgressBar.Foreground>
+            </ProgressBar>
+        </Grid>
+        <TextBox x:Name="abuse" Grid.Row="1" TextWrapping="Wrap" Text="Abuse" Margin="60,8" SelectionBrush="#FF00C3D7" Foreground="#FFA2FF00" >
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0,0" StartPoint="1,0">
+                    <GradientStop Color="#FF291F8D" Offset="0"/>
+                    <GradientStop Color="#FF603BDE" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <ListBox x:Name="lb" Margin="60,30" Grid.Row="2" BorderThickness="3" >
+            <ListBox.BorderBrush>
+                <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
+                    <GradientStop Color="#FFD44D00" Offset="0"/>
+                    <GradientStop Color="#FFFF008B" Offset="1"/>
+                </LinearGradientBrush>
+            </ListBox.BorderBrush>
+            <ListBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF4D0000" Offset="0.897"/>
+                    <GradientStop Color="#FFEA1818"/>
+                </LinearGradientBrush>
+            </ListBox.Background>
+        </ListBox>
+
+    </Grid>
+</Window>
